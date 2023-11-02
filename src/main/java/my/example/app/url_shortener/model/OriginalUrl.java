@@ -1,4 +1,4 @@
-package my.example.urlshortener.model;
+package my.example.app.url_shortener.model;
 
 import lombok.*;
 

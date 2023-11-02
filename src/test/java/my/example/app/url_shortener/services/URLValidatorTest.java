@@ -1,4 +1,4 @@
-package my.example.urlshortener.services;
+package my.example.app.url_shortener.services;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

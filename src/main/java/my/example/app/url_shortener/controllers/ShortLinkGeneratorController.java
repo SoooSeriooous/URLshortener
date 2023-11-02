@@ -1,11 +1,11 @@
-package my.example.urlshortener.controllers;
+package my.example.app.url_shortener.controllers;
 
 import lombok.AllArgsConstructor;
-import my.example.urlshortener.exceptions.AppRuntimeException;
-import my.example.urlshortener.model.OriginalUrl;
-import my.example.urlshortener.model.ShortenedUrl;
-import my.example.urlshortener.services.ShortLinkGenerator;
-import my.example.urlshortener.services.ShortenedLinkConverter;
+import my.example.app.exceptions.AppRuntimeException;
+import my.example.app.url_shortener.model.OriginalUrl;
+import my.example.app.url_shortener.model.ShortenedUrl;
+import my.example.app.url_shortener.services.ShortLinkGenerator;
+import my.example.app.url_shortener.services.ShortenedLinkConverter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package my.example.urlshortener.services;
+package my.example.app.url_shortener.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

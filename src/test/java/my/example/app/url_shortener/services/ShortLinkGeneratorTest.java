@@ -1,7 +1,9 @@
-package my.example.urlshortener.services;
+package my.example.app.url_shortener.services;
 
-import my.example.urlshortener.exceptions.AppRuntimeException;
-import my.example.urlshortener.model.OriginalUrl;
+import my.example.app.exceptions.AppRuntimeException;
+import my.example.app.url_shortener.entities.Url;
+import my.example.app.url_shortener.model.OriginalUrl;
+import my.example.app.url_shortener.repositories.UrlRepository;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -11,12 +13,15 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class ShortLinkGeneratorTest {
 
+    @Mock
+    UrlRepository urlRepository;
     @Mock
     URLValidator urlValidator;
     @InjectMocks
@@ -29,6 +34,7 @@ class ShortLinkGeneratorTest {
     void generate_shouldReturnGeneratedUrl_whenUrlIsValid(){
         var url = "ya.ru";
         when(urlValidator.validateUrl(anyString())).thenReturn(true);
+        when(urlRepository.save(any())).thenReturn(new Url());
         var generated = shortLinkGenerator.generate(new OriginalUrl(url));
 
         Assertions.assertEquals("l/", generated.substring(0, 2));

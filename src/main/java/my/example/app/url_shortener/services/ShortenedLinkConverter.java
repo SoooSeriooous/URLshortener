@@ -1,6 +1,6 @@
-package my.example.urlshortener.services;
+package my.example.app.url_shortener.services;
 
-import my.example.urlshortener.model.ShortenedUrl;
+import my.example.app.url_shortener.model.ShortenedUrl;
 import org.springframework.stereotype.Service;
 
 @Service

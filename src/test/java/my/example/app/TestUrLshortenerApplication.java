@@ -1,4 +1,4 @@
-package my.example.urlshortener;
+package my.example.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
